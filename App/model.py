@@ -35,10 +35,21 @@ es decir contiene los modelos con los datos en memoria
 # API del TAD Catalogo de Libros
 # -----------------------------------------------------
 
-
+def lista():
+    lst= lt.newList()
+    return lst
 
 # Funciones para agregar informacion al catalogo
-
+def loadCSVFile (lst, file, sep=";"):
+    dialect = csv.excel()
+    dialect.delimiter=sep
+    try: 
+        with open(file, encoding="utf-8") as csvfile:
+            spamreader = csv.DictReader(csvfile, dialect=dialect)
+            for row in spamreader: 
+                lt.addLast(lst,row)
+    except:
+        print("Hubo un error con la carga del archivo")
 
 
 # ==============================

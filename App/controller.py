@@ -37,6 +37,9 @@ recae sobre el controlador.
 #  Inicializacion del catalogo
 # ___________________________________________________
 
+def nueva_lista():
+    lst= model.lista()
+    return lst
 
 
 
@@ -44,3 +47,8 @@ recae sobre el controlador.
 #  Funciones para la carga de datos y almacenamiento
 #  de datos en los modelos
 # ___________________________________________________
+def carga_de_datos(file1,lst,lst2,file2):
+    p1= model.loadCSVFile()
+    p2= model.loadCSVFile()
+    return p1,p2
+    
